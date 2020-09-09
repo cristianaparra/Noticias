@@ -14,7 +14,7 @@ function App() {
 
     const consultarAPI = async () => {
 
-      const url = `http://newsapi.org/v2/top-headlines?country=us&category=${categoria}&apiKey=b7bd8c20f52f44a2beccc2af97675cb8`
+      const url = `https://newsapi.org/v2/top-headlines?country=us&category=${categoria}&apiKey=b7bd8c20f52f44a2beccc2af97675cb8`
       const respuesta = await fetch(url);
       const noticias = await respuesta.json();
       guardarNoticias(noticias.articles)
