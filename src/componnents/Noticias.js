@@ -1,15 +1,17 @@
 import React from 'react';
-
+import PropTypes from 'prop-types'
 
 const Noticias = ({ noticia }) => {
     //extraer datos
     const { urlToImage, url, title, description, source } = noticia;
+
     const imagen = (urlToImage)
         ? <div className='card-image'>
             <img src={urlToImage} alt={title} />
             <span className='card-title'>{source.name}</span>
         </div>
         : null;
+
     return (
         <div className='col s12 m6 l4'>
             <div className='card'>
@@ -33,6 +35,8 @@ const Noticias = ({ noticia }) => {
         </div>
     );
 }
+Noticias.propTypes = {
+    noticia: PropTypes.object.isRequired
+}
 
-// obj. noticia
 export default Noticias;

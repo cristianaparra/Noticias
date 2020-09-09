@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Formulario.module.css'
 import useSelect from '../hooks/useSelect'
+import PropTypes from 'prop-types'
 
 const Formulario = ({ guardarCategoria }) => {
 
@@ -28,7 +29,7 @@ const Formulario = ({ guardarCategoria }) => {
         <div className={`${styles.buscador} row`}>
             <div className='col s12 m8 offset m-2'>
                 <form
-                    onSubmit={buscarNoticias}
+                onSubmit={buscarNoticias}
                     >
                     <h2 className={styles.heading}> Encuentra Noticias por Categoria</h2>
 
@@ -47,5 +48,8 @@ const Formulario = ({ guardarCategoria }) => {
     );
 }
 
-//type guardarCategoria func
+Formulario.propTypes = {
+    guardarCategoria: PropTypes.func.isRequired
+}
+
 export default Formulario;

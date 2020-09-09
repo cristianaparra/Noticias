@@ -5,7 +5,7 @@ const useSelect = (stateInicial, opciones) => {
     //state dek custom hook
     const [state, actualizarState] = useState(stateInicial)
 
-    const SelecNoticias = () => (
+    const SelectNoticias = () => (
         <select
             className='browser-default'
             value={state}
@@ -17,7 +17,7 @@ const useSelect = (stateInicial, opciones) => {
         </select>
     )
 
-    return [state, SelecNoticias];
+    return [state, SelectNoticias];
 }
 // string stateInicial, objet opciones
 export default useSelect;
