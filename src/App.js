@@ -1,8 +1,12 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import Header from './componnents/Header'
 import Formulario from './componnents/Formulario'
 
 function App() {
+
+  // definir categoria
+
+  const [categoria, guardarCategoria] = useState('')
   return (
 
     <Fragment>
@@ -10,7 +14,8 @@ function App() {
         titulo='Buscador de Noticias'
       />
       <div className='container white'>
-        <Formulario />
+        <Formulario 
+        guardarCategoria={guardarCategoria}/>
       </div>
     </Fragment>
   );
