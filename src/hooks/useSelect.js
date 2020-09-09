@@ -19,7 +19,7 @@ const useSelect = (stateInicial, opciones) => {
 
     return [state, SelecNoticias];
 }
-
+// string stateInicial, objet opciones
 export default useSelect;
 
 // api key b7bd8c20f52f44a2beccc2af97675cb8
